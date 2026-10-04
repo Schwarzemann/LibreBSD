@@ -1,56 +1,55 @@
-NetBSD
-======
+# The LibreBSD Project
 
-NetBSD is a free, fast, secure, and highly portable Unix-like Open
-Source operating system.  It is available for a [wide range of
-platforms](https://wiki.NetBSD.org/ports/), from large-scale servers
-and powerful desktop systems to handheld and embedded devices.
+LibreBSD is an experimental BSD operating system derived from
+NetBSD 10.2_STABLE.
 
-Building
---------
+The project is currently in early development. Its primary goals are to
+explore operating-system development, gradually develop a distinct
+LibreBSD identity, and experiment with improvements to the NetBSD base
+while retaining its portability and clean design.
 
-You can cross-build NetBSD from most UNIX-like operating systems.
-To build for amd64 (x86_64), in the src directory:
+## Current Status
 
-    ./build.sh -U -u -j4 -m amd64 -O ~/obj release
+LibreBSD is currently **0.1-dev**.
 
-Additional build information available in the [BUILDING](BUILDING) file.
+The system can be built for amd64 and booted under QEMU. Development is
+currently focused on:
 
-Binaries
---------
+- System and kernel identification
+- Release and installation media
+- Userland development
+- Understanding and documenting the NetBSD kernel architecture
+- LibreBSD-specific kernel development
 
-- [Daily builds](https://nycdn.NetBSD.org/pub/NetBSD-daily/HEAD/latest/)
-- [Releases](https://cdn.NetBSD.org/pub/NetBSD/)
+LibreBSD is not currently intended for production use.
 
-Testing
--------
+## Source Base
 
-On a running NetBSD system:
+LibreBSD is derived from NetBSD 10.2_STABLE.
 
-    cd /usr/tests; atf-run | atf-report
+The original NetBSD source tree is preserved in the Git history, and the
+upstream README can be found in `README.NetBSD.md`.
 
-Troubleshooting
----------------
+LibreBSD retains the copyright and license notices of NetBSD and all
+other upstream components.
 
-- Send bugs and patches [via web form](https://www.NetBSD.org/cgi-bin/sendpr.cgi?gndb=netbsd).
-- Subscribe to the [mailing lists](https://www.NetBSD.org/mailinglists/).
-  The [netbsd-users](https://www.NetBSD.org/mailinglists/#netbsd-users) list is a good choice for many problems; watch [current-users](https://www.NetBSD.org/mailinglists/#current-users) if you follow the bleeding edge of NetBSD-current.
-- Join the community IRC channel [#netbsd @ libera.chat](https://web.libera.chat/#netbsd).
+## Source Code
 
-Latest sources
---------------
+Development takes place in this repository. Changes are made
+incrementally so that the differences from upstream NetBSD remain
+understandable and traceable.
 
-To fetch the main CVS repository:
+## Releases
 
-    cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -P src
+LibreBSD is currently under active development. Development images
+should be considered experimental and may contain incomplete or broken
+functionality.
 
-To work in the Git mirror, which is updated every few hours from CVS:
+## License
 
-    git clone https://github.com/NetBSD/src.git
+LibreBSD contains software originating from NetBSD and other projects.
+Individual files and components remain subject to their respective
+copyright and license terms.
 
-Additional Links
-----------------
-
-- [The NetBSD Guide](https://www.NetBSD.org/docs/guide/en/)
-- [NetBSD manual pages](https://man.NetBSD.org/)
-- [NetBSD Cross-Reference](https://nxr.NetBSD.org/)
+See the copyright and license notices included throughout the source
+tree for details.

@@ -103,11 +103,7 @@ MKDIR?=		mkdir -p
 CHMOD?=		chmod
 ECHO?=		echo
 
-.if ${CDRELEASE} == false
-CDIMAGE=	${CDBASE}.iso
-.else
 CDIMAGE=	LibreBSD-${DISTRIBVER}-${CDBASE:S/cd$//}.iso
-.endif
 WORKSPEC=	fs.spec
 
 CLEANFILES+=	${CDIMAGE}

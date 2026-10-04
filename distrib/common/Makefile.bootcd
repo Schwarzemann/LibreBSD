@@ -76,8 +76,8 @@ SETS_DIR?=	${RELEASEDIR}/${RELEASEMACHINEDIR}/binary/sets
 DISTRIBVER!=	${HOST_SH} ${KERNSRCDIR}/conf/osrelease.sh
 DISTRIBREV!=	${HOST_SH} ${KERNSRCDIR}/conf/osrelease.sh -s
 CUROBJDIR!=	cd ${.CURDIR} && ${PRINTOBJDIR}
-ISO_VOLID!=	echo NETBSD_${DISTRIBREV} | tr a-z A-Z
-PUBLISHER?= The_NetBSD_Project
+ISO_VOLID!=	echo LIBREBSD_${DISTRIBREV} | tr a-z A-Z
+PUBLISHER?= The_LibreBSD_Project
 .if defined(CDMAKEFSOPTIONS)
 _CDMAKEFSOPTIONS=	rockridge,label=${ISO_VOLID},publisher=${PUBLISHER},${CDMAKEFSOPTIONS}
 .else
@@ -106,7 +106,7 @@ ECHO?=		echo
 .if ${CDRELEASE} == false
 CDIMAGE=	${CDBASE}.iso
 .else
-CDIMAGE=	NetBSD-${DISTRIBVER}-${CDBASE:S/cd$//}.iso
+CDIMAGE=	LibreBSD-${DISTRIBVER}-${CDBASE:S/cd$//}.iso
 .endif
 WORKSPEC=	fs.spec
 

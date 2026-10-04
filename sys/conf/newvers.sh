@@ -228,7 +228,7 @@ cwd=$(dirname "$0")
 copyright="$(cat "${cwd}/copyright")"
 osrelcmd=${cwd}/osrelease.sh
 
-ost="NetBSD"
+ost="LibreBSD"
 osr=$(sh $osrelcmd)
 
 fullversion="${ost} ${osr} (${id})${reproversion}\n"

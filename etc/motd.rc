@@ -1,8 +1,7 @@
-NetBSD ?.? (UNKNOWN)
+LibreBSD ?.? (UNKNOWN)
 
-Welcome to NetBSD!
+Welcome to LibreBSD!
 
-This is a release candidate for NetBSD.
+This is a release candidate for LibreBSD.
 
-Bug reports: https://www.NetBSD.org/support/send-pr.html
-Donations to the NetBSD Foundation: https://www.NetBSD.org/donations/
+Bug reports: https://github.com/Schwarzemann/LibreBSD

@@ -58,6 +58,10 @@ done
 
 option="$1"
 
+# LibreBSD release string, printed by the default (no option) invocation.
+# The numeric options below still report the NetBSD base version.
+LIBREBSD_VERSION="0.1-dev"
+
 # ${rel_num} is [M]Mmm00pp00
 rel_num=${rel_num%??}
 rel_MMmm=${rel_num%????}
@@ -96,7 +100,6 @@ case "$option" in
 	echo "$*"
 	;;
 *)
-	IFS=.
-	echo "$*"
+	echo "${LIBREBSD_VERSION}"
 	;;
 esac

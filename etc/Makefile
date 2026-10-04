@@ -53,10 +53,10 @@ GZIP_FLAGS= -9 ${GZIP_N_FLAG}
 MKISOFS?=	${TOOL_MKHYBRID}
 DISTRIBREV!=	${HOST_SH} ${KERNSRCDIR}/conf/osrelease.sh -s
 # ISO 9660 volume ID.  Note that this can only contain [A-Z0-9_].
-ISO_VOLID!=	echo NETBSD_${DISTRIBREV} | tr a-z A-Z
+ISO_VOLID!=	echo LIBREBSD_${DISTRIBREV} | tr a-z A-Z
 MKISOFS_FLAGS+= -J -l -r \
 		-V ${ISO_VOLID} \
-		-publisher "The NetBSD Project" \
+		-publisher "The LibreBSD Project" \
 		-m "${RELEASEDIR}/${RELEASEMACHINEDIR}/installation/cdrom"
 .if ${MKISOFS_FLAGS:N-v}
 MKISOFS_FLAGS+=	-quiet
@@ -195,7 +195,7 @@ MAKEDEV: ${.CURDIR}/MAKEDEV.awk ${.CURDIR}/MAKEDEV.tmpl \
 CLEANFILES+=	etc-release
 etc-release: .EXEC .MAKE
 	${_MKTARGET_CREATE}
-	@(	echo "NetBSD ${DISTRIBVER}/${MACHINE}"; \
+	@(	echo "LibreBSD ${DISTRIBVER}/${MACHINE}"; \
 		echo ; \
 		cat ${NETBSDSRCDIR}/sys/conf/copyright; \
 		echo ; \
@@ -432,7 +432,7 @@ release snapshot: .PHONY .MAKE check_DESTDIR check_RELEASEDIR snap_md_post
 #	Note: At least mkisofs 2.0 should be used.
 #
 CDROM_NAME_ADD?=
-CDROM_IMAGE?=${RELEASEDIR}/images/NetBSD-${DISTRIBVER}-${MACHINE}.iso
+CDROM_IMAGE?=${RELEASEDIR}/images/LibreBSD-${DISTRIBVER}-${MACHINE}.iso
 CDROM.dir=	${.OBJDIR}/cdrom.dir
 CDROM.pathlist=	${.OBJDIR}/cdrom.pathlist
 

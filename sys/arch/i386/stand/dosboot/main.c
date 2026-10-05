@@ -40,6 +40,7 @@
 
 #include <lib/libkern/libkern.h>
 #include <lib/libsa/stand.h>
+#include <lib/libsa/bootcfg.h>
 #include <lib/libsa/ufs.h>
 
 #include <libi386.h>
@@ -212,7 +213,7 @@ print_banner(void)
 #endif
 
 	printf("\n"
-	       ">> %s, Revision %s (from NetBSD %s)\n"
+	       ">> " BOOTPROG_BANNER_FMT "\n"
 	       ">> Memory: %d/%d %sk\n",
 	       bootprog_name, bootprog_rev, bootprog_kernrev,
 	       getbasemem(), extmem, s);

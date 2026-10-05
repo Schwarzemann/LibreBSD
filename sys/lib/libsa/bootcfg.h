@@ -36,6 +36,12 @@
 #define BOOTCFG_CMD_LOAD	  "load"
 #define BOOTCFG_CMD_USERCONF	  "userconf"
 
+/*
+ * Banner line shared by all boot programs.  Callers add the ">> "
+ * prefix and the newline, and print the memory line themselves.
+ */
+#define BOOTPROG_BANNER_FMT	"%s, Revision %s (from LibreBSD %s)"
+
 typedef void (*bootcfg_command)(const char *cmd, char *arg);
 
 struct bootcfg_def {

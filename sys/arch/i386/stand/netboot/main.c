@@ -40,6 +40,7 @@
 #include <lib/libkern/libkern.h>
 
 #include <lib/libsa/stand.h>
+#include <lib/libsa/bootcfg.h>
 
 #include <libi386.h>
 
@@ -77,7 +78,7 @@ print_banner(void)
 	clear_pc_screen();
 
 	printf("\n"
-	       ">> %s, Revision %s (from NetBSD %s)\n"
+	       ">> " BOOTPROG_BANNER_FMT "\n"
 	       ">> Memory: %d/%d k\n"
 	       "Press return to boot now, any other key for boot menu\n"
 	       "starting in ",

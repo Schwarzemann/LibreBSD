@@ -1072,7 +1072,7 @@ cpu_identify(struct cpu_info *ci)
 		    sizeof(cpu_brand_string));
 	}
 	if (cpu_class == CPUCLASS_386) {
-		panic("NetBSD requires an 80486DX or later processor");
+		panic("LibreBSD requires an 80486DX or later processor");
 	}
 	if (cputype == CPU_486DLC) {
 		aprint_error("WARNING: BUGGY CYRIX CACHE\n");

@@ -388,7 +388,7 @@ init_volzero_sig(struct open_file *f)
  * Until the real cause is located, work around it by using -O1
  * for this function.
  */
-#if defined(__i386__) && !defined(__clang__)
+#if defined(__i386__) && defined(__GNUC__) && __GNUC__ == 8
 __attribute__((__optimize__("O1")))
 #endif
 __compactcall int

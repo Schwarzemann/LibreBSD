@@ -339,7 +339,7 @@ dpt_init(struct dpt_softc *sc, const char *intrstr)
 
 	ec = &sc->sc_ec;
 	snprintf(dpt_sig.dsDescription, sizeof(dpt_sig.dsDescription),
-	    "NetBSD %s DPT driver", osrelease);
+	    "LibreBSD %s DPT driver", osrelease);
 	mutex_init(&sc->sc_lock, MUTEX_DEFAULT, IPL_NONE);
 
 	/*

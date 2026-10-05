@@ -284,22 +284,13 @@ perform_bootcfg(const char *conf, bootcfg_command command, const off_t maxsz)
 void
 print_bootcfg_banner(const char *bootprog_name, const char *bootprog_rev)
 {
-	int n = 0;
-
-	if (bootcfg_info.banner[0]) {  
-		for (; n < BOOTCFG_MAXBANNER && bootcfg_info.banner[n]; n++) 
+	if (bootcfg_info.banner[0]) {
+		for (int n = 0; n < BOOTCFG_MAXBANNER && bootcfg_info.banner[n]; n++)
 			printf("%s\n", bootcfg_info.banner[n]);
 		return;
 	}
 
 	/* If the user has not specified a banner, print a default one. */
 
-	printf("\n");
-	printf("  \\\\-__,------,___.\n");
-	printf("   \\\\        __,---`  %s\n", bootprog_name);
-	printf("    \\\\       `---,_.  Revision %s\n", bootprog_rev);
-	printf("     \\\\-,_____,.---`\n");
-	printf("      \\\\\n");
-	printf("       \\\\\n");
-	printf("        \\\\\n\n");
+	printf("\n%s Revision %s\n\n", bootprog_name, bootprog_rev);
 }

@@ -719,7 +719,7 @@ command_version(char *arg)
 	}
 
 	printf("\n"
-	    ">> %s, Revision %s (from NetBSD %s)\n"
+	    ">> " BOOTPROG_BANNER_FMT "\n"
 	    ">> Memory: %d/%d k\n",
 	    bootprog_name, bootprog_rev, bootprog_kernrev,
 	    getbasemem(), getextmem());

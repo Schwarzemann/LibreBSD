@@ -28,7 +28,7 @@ LibreBSD is not currently intended for production use.
 LibreBSD is derived from NetBSD 10.2_STABLE.
 
 The original NetBSD source tree is preserved in the Git history, and the
-upstream README can be found in `README.NetBSD.md`.
+upstream README can be found in `README-NetBSD.md`.
 
 LibreBSD retains the copyright and license notices of NetBSD and all
 other upstream components.

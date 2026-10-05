@@ -9,7 +9,7 @@ _NVFLAGS=${NVFLAGS} -r ${MKREPRO_TIMESTAMP} -i ${KERNEL_BUILD:T} -m ${MACHINE}
 _NVFLAGS=${NVFLAGS} -R
 .	endif
 .else
-_NVFLAGS=${NVFLAGS}
+_NVFLAGS=${NVFLAGS} -R
 .endif
 
 .if !target(vers.o)

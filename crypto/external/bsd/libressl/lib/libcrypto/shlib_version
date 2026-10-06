@@ -1,0 +1,5 @@
+#	Placeholder shared-library version for the LibreSSL import. It is deliberately
+#	not OpenSSL's (major=15) so the two can coexist. The real number is chosen when
+#	the libraries are installed (Phase 2).
+major=100
+minor=0
